@@ -1,0 +1,11 @@
+{
+  "name": "terraform-docker",
+  "version": "1.0.0",
+  "description": "Docker with terraform, kubectl and bash",
+  "repository": "git@github.com:souravworkspace/terraform-kubectl-alpine.git",
+  "author": "Sourav Halder",
+  "scripts": {
+    "dev": "docker build .",
+    "postversion": "git push origin && git push origin --tags"
+  }
+}
