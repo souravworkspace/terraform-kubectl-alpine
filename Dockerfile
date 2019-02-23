@@ -15,5 +15,4 @@ ADD "https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION
 RUN set -x && \
     chmod +x /usr/local/bin/kubectl && \
     adduser kubectl -Du 2342 -h /config
-
 USER kubectl
