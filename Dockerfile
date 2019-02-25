@@ -2,7 +2,7 @@ FROM alpine:latest
 LABEL name="terraform & kubectl"
 ENV TERRAFORM_VERSION=0.11.11
 ENV KUBECTL_VERSION=v1.13.3
-ENV KUBECONFIG=/kube/config
+ENV KUBECONFIG=/home/.kube/config
 VOLUME ["/data"]
 WORKDIR /data
 RUN apk update && \
@@ -15,5 +15,5 @@ RUN apk --update --no-cache add openssl && \
 ADD "https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl" "/usr/local/bin/kubectl"
 RUN set -x && \
     chmod +x /usr/local/bin/kubectl && \
-    adduser kubectl -Du 2342 -h /kube
+    adduser kubectl -Du 2342 -h /home
 USER kubectl
