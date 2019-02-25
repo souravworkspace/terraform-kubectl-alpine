@@ -1,6 +1,6 @@
 {
   "name": "terraform-kubectl-alpine",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Docker with terraform, kubectl and bash",
   "repository": "git@github.com:souravworkspace/terraform-kubectl-alpine.git",
   "author": "Sourav Halder",
