@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM google/cloud-sdk:alpine
 LABEL name="terraform & kubectl"
 ENV TERRAFORM_VERSION=0.11.11
 ENV KUBECTL_VERSION=v1.13.3
