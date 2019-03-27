@@ -8,6 +8,7 @@ WORKDIR /data
 RUN apk update && \
   apk add ca-certificates bash wget && \
   update-ca-certificates
+RUN apk add --update nodejs
 RUN apk --update --no-cache add openssl && \
   wget -O terraform.zip "https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip" && \
   unzip terraform.zip -d /bin && \
